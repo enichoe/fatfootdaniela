@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fat Food Daniela</title>
+
+  <!-- Fuente moderna desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Enlace a tu hoja de estilos (asegúrate de tener styles.css) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header>
+    <h1>Fat Food Daniela 🍔</h1>
+    <p>¡Delicias rápidas con sabor casero!</p>
+  </header>
+
+  <!-- SECCIÓN DE MENÚ -->
+  <section>
+    <h2>Menú</h2>
+    <div class="menu">
+
+      <!-- Producto 1: Hamburguesa -->
+      <div class="menu-item">
+        <img src="/img/img3.webp" alt="Hamburguesa">
+        <h3>Hamburguesa</h3>
+        <p>S/12</p>
+      </div>
+
+      <!-- Producto 2: Alitas BBQ -->
+      <div class="menu-item">
+        <img src="/img/img2.jpg" alt="Alitas BBQ">
+        <h3>Alitas BBQ</h3>
+        <p>S/15</p>
+      </div>
+
+      <!-- Producto 3: Salchipapas -->
+      <div class="menu-item">
+        <img src="/img/img1.jpg" alt="Salchipapas">
+        <h3>Salchipapas</h3>
+        <p>S/10</p>
+      </div>
+
+      <!-- Producto 4: Pollo Broster -->
+      <div class="menu-item">
+        <img src="/img/broaster.webp" alt="Salchipapas">
+        <h3>Pollo Broster</h3>
+        <p>S/10</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIO DE ATENCIÓN -->
+  <section>
+    <h2>Horario de Atención</h2>
+    <p>🕒 Martes a Domingo de 6:00 p.m. a 11:00 p.m.</p>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section>
+    <h2>Ubicación</h2>
+    <p>📍 Av. Conquistadores 217, Urb. Valdiviezo, San Martín de Porres</p>
+    <a class="button-whatsapp" href="https://www.google.com/maps?q=av.+conquistadores+217,+urb.+valdiviezo,+san+martin+de+porres" target="_blank">Ver en Google Maps</a>
+  </section>
+
+  <!-- BOTÓN PRINCIPAL DE WHATSAPP -->
+  <section>
+    <a class="button-whatsapp" href="https://wa.me/51932721373" target="_blank">🛒 Pedir por WhatsApp</a>
+  </section>
+
+  <!-- FOOTER CON REDES SOCIALES -->
+  <footer>
+    <p>© 2025 Fat Food Daniela. Todos los derechos reservados.</p>
+    <p>Síguenos en redes sociales:</p>
+    <a href="https://facebook.com" target="_blank">📘 Facebook</a> |
+    <a href="https://instagram.com" target="_blank">📷 Instagram</a> |
+    <a href="https://tiktok.com" target="_blank">🎵 TikTok</a>
+  </footer>
+
+  <!-- ÍCONO DE CHAT FLOTANTE -->
+  <div id="whatsapp-icon" onclick="toggleChatbot()">
+    <!-- 🤖 🛒 -->
+     🍔
+  </div>
+
+  <!-- CONTENEDOR DEL CHATBOT -->
+  <div class="chatbot-container" id="chatbot" style="display: none;">
+    <div class="chatbot-header">
+      🤖 FatBot - Asistente Virtual 
+      <span style="float:right; cursor:pointer; color:#ff6666" onclick="toggleChatbot()">✖</span>
+    </div>
+    <!-- ÚNICA OPCIÓN: HACER PEDIDO -->
+    <button class="chatbot-button" onclick="seleccionarProducto()">🛒 Hacer pedido</button>
+    <div id="botResponse" style="margin-top: 15px;"></div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

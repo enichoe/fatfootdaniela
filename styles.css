@@ -1,0 +1,262 @@
+/* FUENTE PRINCIPAL */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff9f5;
+  color: #333;
+}
+
+/* ENCABEZADO PRINCIPAL MEJORADO */
+header {
+  background: linear-gradient(135deg, #ff4d4d, #ff7f50); /* Degradado rojo-anaranjado */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeInDown 1s ease;
+}
+
+/* TÍTULO PRINCIPAL */
+header h1 {
+  font-size: 2.8em;
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+  letter-spacing: 1px;
+  animation: zoomIn 1s ease;
+}
+
+/* SUBTÍTULO */
+header p {
+  font-size: 1.3em;
+  margin-top: 12px;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ANIMACIONES */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* SECCIONES GENERALES */
+section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+/* MENÚ DE PRODUCTOS */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.menu-item h3 {
+  margin: 5px 0;
+  color: #333;
+}
+
+.menu-item p {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* BOTÓN DE WHATSAPP PRINCIPAL */
+.button-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.button-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #f1c40f;
+  text-decoration: none;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff4d4d;
+}
+
+
+
+.chatbot-container {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  z-index: 999;
+}
+
+.chatbot-header {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #ff4d4d;
+}
+
+.chatbot-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chatbot-button:hover {
+  background-color: #e63a3a;
+}
+
+.chatbot-button.secondary {
+  background-color: #f1c40f;
+  color: #222;
+}
+
+.chatbot-button.secondary:hover {
+  background-color: #d4ac0d;
+}
+
+/* SELECTS Y CHECKBOXES */
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.checkbox-group label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+  }
+
+  .chatbot-container {
+    width: 90%;
+    right: 5%;
+  }
+}
+
+/* BOTÓN FLOTANTE DE CHAT CON HAMBURGUESA */
+#whatsapp-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #ff3b3f; /* Rojo salsa picante */
+  color: white;
+  font-size: 28px;
+  padding: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(255, 59, 63, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulse 2s infinite;
+}
+
+/* Efecto al pasar el mouse */
+#whatsapp-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(255, 59, 63, 0.8);
+  background-color: #e52a2f;
+}
+
+/* Animación de pulsación */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 59, 63, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(255, 59, 63, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 59, 63, 0);
+  }
+}
