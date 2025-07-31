@@ -50,7 +50,8 @@
       const papas = document.getElementById("papas").value;
       const cremaCheckboxes = document.querySelectorAll('#cremas input[type=checkbox]:checked');
       const cremas = Array.from(cremaCheckboxes).map(cb => cb.value).join(', ');
-      const mensaje = `Hola, quiero pedir una *Hamburguesa* con:\n- Tipo de carne: ${carne}\n- Cremas: ${cremas}\n- Papas: ${papas}`;
+      const mensaje = `🍔 *Hola! Quiero pedir una Hamburguesa*:\n\n🍖 *Tipo de carne:* ${carne}\n🥫 *Cremas:* ${cremas}\n🍟 *Papas:* ${papas}\n\n📍Gracias 😋`;
+
       window.open(`https://wa.me/51932721373?text=${encodeURIComponent(mensaje)}`, '_blank');
     }
 
@@ -82,7 +83,8 @@
       const salsa = document.getElementById("salsaAlitas").value;
       const cremaCheckboxes = document.querySelectorAll('#cremasSalchi input[type=checkbox]:checked');
       const cremas = Array.from(cremaCheckboxes).map(cb => cb.value).join(', ');
-      const mensaje = `Hola, quiero pedir *Alitas* con salsa: ${salsa} :\n- Cremas: ${cremas}`;
+      const mensaje = `🍗 *Hola! Quiero pedir Alitas*:\n\n🔥 *Salsa:* ${salsa}\n🥫 *Cremas:* ${cremas}\n\n📍¡Gracias! 😋`;
+
       window.open(`https://wa.me/51932721373?text=${encodeURIComponent(mensaje)}`, '_blank');
     }
 
@@ -112,7 +114,8 @@
       const tamano = document.getElementById("tamanoSalchi").value;
       const cremaCheckboxes = document.querySelectorAll('#cremasSalchi input[type=checkbox]:checked');
       const cremas = Array.from(cremaCheckboxes).map(cb => cb.value).join(', ');
-      const mensaje = `Hola, quiero pedir *Salchipapas*:\n- Tamaño: ${tamano}\n- Cremas: ${cremas}`;
+      const mensaje = `🍟 *Hola! Quiero pedir unas Salchipapas*:\n\n📏 *Tamaño:* ${tamano}\n🥫 *Cremas:* ${cremas}\n\n📍¡Gracias! 😋`;
+
       window.open(`https://wa.me/51932721373?text=${encodeURIComponent(mensaje)}`, '_blank');
     }
 
@@ -143,7 +146,8 @@
       const presa = document.getElementById("presa").value;
       const cremaCheckboxes = document.querySelectorAll('#cremasBroaster input[type=checkbox]:checked');
       const cremas = Array.from(cremaCheckboxes).map(cb => cb.value).join(', ');
-      const mensaje = `Hola, quiero pedir *Broaster*:\n- Presa: ${presa}\n- Cremas: ${cremas}`;
+      const mensaje = `🍗 *Hola! Quiero pedir un Broaster*:\n\n🍖 *Presa:* ${presa}\n🥫 *Cremas:* ${cremas}\n\n📍¡Gracias! 😋`;
+
       window.open(`https://wa.me/51932721373?text=${encodeURIComponent(mensaje)}`, '_blank');
     }
   
