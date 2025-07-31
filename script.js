@@ -17,43 +17,61 @@
       `;
     }
 
-    // Opciones para hamburguesa
-    function pedidoHamburguesa() {
-      document.getElementById("botResponse").innerHTML = `
-        <p><strong>🍔 Hamburguesa</strong></p>
-        <p>Tipo de carne:</p>
-        <select id="tipoCarne">
-          <option>Carne</option>
-          <option>Pollo</option>
-          <option>Chorizo</option>
-        </select>
-        <p>Cremas:</p>
-        <div id="cremas">
-          <label><input type="checkbox" value="Mayonesa"> Mayonesa</label>
-          <label><input type="checkbox" value="Ketchup"> Ketchup</label>
-          <label><input type="checkbox" value="Mostaza"> Mostaza</label>
-          <label><input type="checkbox" value="Ají"> Ají</label>
-          <label><input type="checkbox" value="BBQ"> BBQ</label>
-        </div>
-        <p>Tipo de papas:</p>
-        <select id="papas">
-          <option>Normales</option>
-          <option>Hilo</option>
-        </select>
-        <button class="chatbot-button secondary" onclick="enviarPedidoHamburguesa()">✅ Confirmar pedido</button>
-      `;
-    }
+   // Opciones para hamburguesa
+function pedidoHamburguesa() {
+  document.getElementById("botResponse").innerHTML = `
+    <p><strong>🍔 Hamburguesa</strong></p>
 
-    // Enviar pedido de hamburguesa a WhatsApp
-    function enviarPedidoHamburguesa() {
-      const carne = document.getElementById("tipoCarne").value;
-      const papas = document.getElementById("papas").value;
-      const cremaCheckboxes = document.querySelectorAll('#cremas input[type=checkbox]:checked');
-      const cremas = Array.from(cremaCheckboxes).map(cb => cb.value).join(', ');
-      const mensaje = `🍔 *Hola! Quiero pedir una Hamburguesa*:\n\n🍖 *Tipo de carne:* ${carne}\n🥫 *Cremas:* ${cremas}\n🍟 *Papas:* ${papas}\n\n📍Gracias 😋`;
+    <p>Tipo de carne:</p>
+    <select id="tipoCarne">
+      <option>Carne</option>
+      <option>Pollo</option>
+      <option>Chorizo</option>
+    </select>
 
-      window.open(`https://wa.me/51932721373?text=${encodeURIComponent(mensaje)}`, '_blank');
-    }
+    <p>Cremas:</p>
+    <div id="cremas">
+      <label><input type="checkbox" value="Mayonesa"> Mayonesa</label>
+      <label><input type="checkbox" value="Ketchup"> Ketchup</label>
+      <label><input type="checkbox" value="Mostaza"> Mostaza</label>
+      <label><input type="checkbox" value="Ají"> Ají</label>
+      <label><input type="checkbox" value="BBQ"> BBQ</label>
+    </div>
+
+    <p>Tipo de papas:</p>
+    <select id="papas">
+      <option>Normales</option>
+      <option>Hilo</option>
+    </select>
+
+    <p>Bebida:</p>
+    <div id="bebida">
+      <label><input type="checkbox" value="Coca-Cola"> Coca-Cola</label>
+      <label><input type="checkbox" value="Inca-Kola"> Inca-Kola</label>
+      <label><input type="checkbox" value="Pepsi"> Pepsi</label>
+      <label><input type="checkbox" value="Sin bebida"> Sin bebida</label>
+    </div>
+
+    <button class="chatbot-button secondary" onclick="enviarPedidoHamburguesa()">✅ Confirmar pedido</button>
+  `;
+}
+
+// Enviar pedido de hamburguesa a WhatsApp
+function enviarPedidoHamburguesa() {
+  const carne = document.getElementById("tipoCarne").value;
+  const papas = document.getElementById("papas").value;
+
+  const cremaCheckboxes = document.querySelectorAll('#cremas input[type=checkbox]:checked');
+  const bebidaCheckboxes = document.querySelectorAll('#bebida input[type=checkbox]:checked');
+
+  const cremas = Array.from(cremaCheckboxes).map(cb => cb.value).join(', ') || 'Sin cremas';
+  const bebidas = Array.from(bebidaCheckboxes).map(cb => cb.value).join(', ') || 'Sin bebida';
+
+  const mensaje = `🍔 *Hola! Quiero pedir una Hamburguesa*:\n\n🍖 *Tipo de carne:* ${carne}\n🥫 *Cremas:* ${cremas}\n🍟 *Papas:* ${papas}\n🧃 *Bebida:* ${bebidas}\n\n📍  Gracias 😋`;
+
+  window.open(`https://wa.me/51932721373?text=${encodeURIComponent(mensaje)}`, '_blank');
+}
+
 
     // Opciones para alitas
     function pedidoAlitas() {
