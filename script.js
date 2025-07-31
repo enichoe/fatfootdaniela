@@ -24,9 +24,10 @@ function pedidoHamburguesa() {
 
     <p>Tipo de carne:</p>
     <select id="tipoCarne">
-      <option>Carne</option>
-      <option>Pollo</option>
-      <option>Chorizo</option>
+        <option>Royal</option>  
+        <option>Carne</option>
+        <option>Pollo</option>
+        <option>Chorizo</option>
     </select>
 
     <p>Cremas:</p>
